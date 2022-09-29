@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        body {
+            background-image: linear-gradient(#ffeeec, #e4eeff);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .main {
+            background-color: white;
+            width: 570px;
+            margin: 90px auto;
+            border-radius: 15px;
+            color: #00105a;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: rgb(202, 202, 255);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 30px;
+        }
+
+        .accordion {
+            padding: 10px 60px 30px;
+        }
+
+        .top {
+            padding: 10px 45px 30px;
+        }
+
+        .more {
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 500px;
+            padding: 9px;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin-top: 25px;
+            background-color: #4b43f1;
+            margin-bottom: 50px;
+        }
+
+        .accordion .container {
+            position: relative;
+            margin: 10px 10px;
+        }
+
+        .accordion .container.active {
+            border-radius: 20px;
+            background: #e7edff;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 0;
+        }
+
+        .accordion .label {
+            position: relative;
+            padding: 10px 0;
+            font-size: 20px;
+            font-weight: 500;
+            color: #00105a;
+            cursor: pointer;
+            margin-left: 25px;
+        }
+
+        .accordion .label::before {
+            content: '+';
+            color: #00105a;
+            position: relative;
+            top: 50%;
+            left: -20px;
+            font-size: 30px;
+            transform: translateY(-50%);
+            border-radius: 70px;
+            padding: 7px;
+            padding-top: 0px;
+            padding-bottom: 4px;
+            background-color: white;
+            /* padding-left:0px; */
+            /* padding-right:0px; */
+            box-shadow: 0px 1px 3px 1px rgba(208, 208, 208, 0.431);
+        }
+
+        .accordion .content {
+            position: relative;
+            height: 0;
+            font-size: 20px;
+            text-align: justify;
+            /* width: 780px; */
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .accordion .content {
+            -ms-overflow-style: none;
+            overflow: auto;
+            scrollbar-width: none;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .content::-webkit-scrollbar {
+            display: none;
+        }
+
+        hr {
+            width: 100;
+            margin-left: 0;
+            border: 1px solid rgb(208, 208, 208);
+
+        }
+
+        .accordion .container.active .content {
+            height: 150px;
+        }
+
+        .accordion .container.active .label::before {
+            content: '-';
+            font-size: 35px;
+            border-radius: 70px;
+            padding: 7px;
+            padding-top: 0px;
+            padding-bottom: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="accordion-body">
+        <div class="main">
+            <div class="top">
+                <!-- <h1>Accordion</h1> -->
+                <h2>Several Windows Stacked On Each Other</h2>
+                <p>The accordion is graphical control element comprimising
+                    <br> a
+                    vertically stacked list of items such as labels or thumbnails
+                </p>
+            </div>
+            <hr>
+            <div class="accordion">
+
+                <div class="container">
+                    <div class="label">Why this term ?</div>
+                    <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web
+                        pages and
+                        online applications. A hypertext is a text that is used to reference other peices of text ,
+                        while a
+                        markup
+                        language is a series of markings that tells web servers the style and structure of a document.
+                        HTML
+                        is very
+                        simple to use.
+                        <br>
+                        <a href="#"><button class="more">Learn more</button></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="label">When to use accordian components ?</div>
+                    <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web
+                        pages and
+                        online applications. A hypertext is a text that is used to reference other peices of text ,
+                        while a
+                        markup
+                        language is a series of markings that tells web servers the style and structure of a document.
+                        HTML
+                        is very
+                        simple to use.
+                        <br>
+                        <a href="#"><button class="more">Learn more</button></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="label">How can it be defined ?</div>
+                    <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web
+                        pages and
+                        online applications. A hypertext is a text that is used to reference other peices of text ,
+                        while a
+                        markup
+                        language is a series of markings that tells web servers the style and structure of a document.
+                        HTML
+                        is very
+                        simple to use.
+                        <br>
+                        <a href="#"><button class="more">Learn more</button></a>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="label">When to use accordian components ?</div>
+                    <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web
+                        pages and
+                        online applications. A hypertext is a text that is used to reference other peices of text ,
+                        while a
+                        markup
+                        language is a series of markings that tells web servers the style and structure of a document.
+                        HTML
+                        is very
+                        simple to use.
+                        <br>
+                        <a href="#"><button class="more">Learn more</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordion = document.getElementsByClassName('container');
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function () {
+                this.classList.toggle('active')
+            })
+        }
+    </script>
+</body>
+
+</html>
